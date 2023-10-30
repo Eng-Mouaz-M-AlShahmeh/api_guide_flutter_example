@@ -119,6 +119,8 @@ Note: When working with real APIs, always be mindful of their terms of use and r
         version: 0.1,
         latestUpdate: DateTime.now(),
         apiIntro: introduction,
+        privacyLink: 'https://flutter.dev',
+        termsLink: 'https://flutter.dev',
       ),
     );
   }
