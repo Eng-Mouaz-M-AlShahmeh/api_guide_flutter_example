@@ -32,8 +32,8 @@ In today's digital age, Application Programming Interfaces (APIs) play a fundame
         context: context,
         urlHost: 'https://example.com',
         apiItems: [
-          const APIItem(
-            request: APIGuideRequest(
+          APIItem(
+            request: const APIGuideRequest(
               method: HttpRequestMethod.POST,
               params: [],
               body: [
@@ -50,7 +50,7 @@ An API key is a crucial element for secure and controlled access to an applicati
               headers: [],
             ),
             response: [
-              APIGuideResponse(
+              const APIGuideResponse(
                 statusCode: HttpResponseStatusCode.OK,
                 headers: [],
                 body: {
