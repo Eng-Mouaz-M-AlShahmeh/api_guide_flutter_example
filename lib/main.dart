@@ -121,6 +121,7 @@ Note: When working with real APIs, always be mindful of their terms of use and r
         apiIntro: introduction,
         privacyLink: 'https://flutter.dev',
         termsLink: 'https://flutter.dev',
+        themeColor: APIGuideThemeColor.teal,
       ),
     );
   }
