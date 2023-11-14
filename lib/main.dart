@@ -47,7 +47,6 @@ An API key is a crucial element for secure and controlled access to an applicati
                   isRequired: true,
                 ),
               ],
-              headers: [],
             ),
             response: [
               const APIGuideResponse(
@@ -75,6 +74,44 @@ An API key is a crucial element for secure and controlled access to an applicati
             urlPath: '/get-all',
             description: '''
 To retrieve a list of all available resources from a web server, you can send an HTTP POST request to the 'get-all' endpoint, including a required 'api_key' attribute in the request body. This 'api_key' serves as a secure token to authenticate and authorize your access to the server's database or repository, allowing you to fetch all the data it holds. When you send the POST request with the 'api_key' in the request body, the server processes your request and responds with a collection of items, typically in a format like JSON or XML, depending on the server's configuration. You can use various programming languages and tools, such as Python's requests library or JavaScript's fetch function, to make this request. Once you receive the response, you can parse and manipulate the data as needed for your application. Remember that 'get-all' is just a placeholder for a real API endpoint; in practice, you'll replace it with the actual URL of the server you're interacting with, which provides access to the specific data you're interested in retrieving. The inclusion of the 'api_key' in the POST request body ensures secure and authorized access to the server's resources.            
+''',
+          ),
+          APIItem(
+            request: const APIGuideRequest(
+              method: HttpRequestMethod.GET,
+              params: [
+                APIGuideParam(
+                  key: 'id',
+                  value: '1',
+                  isRequired: true,
+                  parameterType: ParameterType.path,
+                  propertyType: PropertyType.integer,
+                  description:
+                      'This description provides an overview of the purpose of the "data id" path parameter. It mentions that the parameter represents a unique identifier for a data entity, and it gives examples of how it might be used in different API endpoints. The note at the end reminds developers to replace "{data id}" with the actual identifier when making requests. Adjust the language and details based on the specific context and conventions of your application or API.',
+                ),
+              ],
+              body: [],
+            ),
+            response: [
+              const APIGuideResponse(
+                statusCode: HttpResponseStatusCode.OK,
+                headers: [],
+                body: {
+                  "data": [
+                    {
+                      "id": 1,
+                      "name": "Item 1",
+                      "description": "This is the first item in the list.",
+                      "price": 19.99
+                    },
+                  ]
+                },
+              ),
+            ],
+            title: 'Get One Data by ID',
+            urlPath: '/{id}/get-resource',
+            description: '''
+To retrieve a one available resources from a web server, you can send an HTTP GET request to the 'get-resource' endpoint, including a required 'id' attribute in the request path params. This 'id' serves as a unique identifier your access to the server's database or repository, allowing you to fetch one record from the data it holds. When you send the GET request with the 'id' in the request path params, the server processes your request and responds with a one item, typically in a format like JSON or XML, depending on the server's configuration. You can use various programming languages and tools, such as Python's requests library or JavaScript's fetch function, to make this request. Once you receive the response, you can parse and manipulate the data as needed for your application. Remember that 'get-resource' is just a placeholder for a real API endpoint; in practice, you'll replace it with the actual URL of the server you're interacting with, which provides access to the specific data you're interested in retrieving. The inclusion of the 'id' in the GET request path params ensures secure and authorized access to the server's resources.            
 ''',
           ),
         ],
@@ -119,9 +156,12 @@ Note: When working with real APIs, always be mindful of their terms of use and r
         version: 0.1,
         latestUpdate: DateTime.now(),
         apiIntro: introduction,
-        privacyLink: 'https://flutter.dev',
-        termsLink: 'https://flutter.dev',
+        privacyLink: 'https://malshahmeh.web.app/privacy',
+        termsLink: 'https://malshahmeh.web.app/privacy',
         themeColor: APIGuideThemeColor.teal,
+        spdxLicenceType: SPDXLicenceType.mit,
+        contactLink: 'https://malshahmeh.web.app',
+        contactEmail: 'm.m.shahmeh@gmail.com',
       ),
     );
   }
