@@ -35,8 +35,14 @@ In today's digital age, Application Programming Interfaces (APIs) play a fundame
         ],
         apiItems: [
           APIItem(
-            securitySchemes: [],
-            request: const APIGuideRequest(
+            securitySchemes: [
+              APISecurityScheme(
+                securitySchemeType: SecuritySchemeType.BearerHTTP,
+                securitySchemeKey: 'apiKey1',
+                securitySchemeName: 'apiKey',
+              ),
+            ],
+            request: APIGuideRequest(
               method: HttpRequestMethod.POST,
               params: [],
               body: [

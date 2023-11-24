@@ -5,10 +5,10 @@ packages:
     dependency: "direct main"
     description:
       name: api_guide
-      sha256: c49fa9b80509d2a23e4d6e3b467f89f1fa5fbac05e2d562f7767d805ba6e24f6
+      sha256: "0ee8146609c6e4662e84d61d91143c9525cec7a1f19668e8e5ca5582cbe37b61"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   async:
     dependency: transitive
     description:
