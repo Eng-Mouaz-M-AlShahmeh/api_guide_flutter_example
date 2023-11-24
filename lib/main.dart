@@ -30,9 +30,12 @@ In today's digital age, Application Programming Interfaces (APIs) play a fundame
     return Scaffold(
       body: APIGuide().display(
         context: context,
-        urlHost: 'https://example.com',
+        servers: const [
+          APIServer(urlHost: 'https://example.com'),
+        ],
         apiItems: [
           APIItem(
+            securitySchemes: [],
             request: const APIGuideRequest(
               method: HttpRequestMethod.POST,
               params: [],
@@ -77,7 +80,8 @@ To retrieve a list of all available resources from a web server, you can send an
 ''',
           ),
           APIItem(
-            request: const APIGuideRequest(
+            securitySchemes: [],
+            request: APIGuideRequest(
               method: HttpRequestMethod.GET,
               params: [
                 APIGuideParam(
